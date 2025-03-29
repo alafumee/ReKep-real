@@ -8,6 +8,7 @@ import rekep.transform_utils as T
 import imageio
 import json
 from pathlib import Path
+from polymetis import RobotInterface
 # OG related
 # import omnigibson as og
 # from omnigibson.macros import gm
@@ -133,7 +134,8 @@ class R2D2Env:
         self.interpolate_rot_step_size = self.config['interpolate_rot_step_size']
         self.robot_state_path =  Path('./robot_state.json')
         
-        self.robot = RobotController()
+        # self.robot = RobotController()
+        self.robot = RobotInterface()
         self.reset_joint_pos = np.array([0.5, 0, 0.5, 1, 0, 0, 0])  # Default home position
         self.gripper_state = 1.0  # 1.0 is open, 0.0 is closed
         self.world2robot_homo = np.eye(4)

@@ -12,6 +12,7 @@ from rekep.subgoal_solver import SubgoalSolver
 from rekep.path_solver import PathSolver
 import rekep.transform_utils as T
 from rekep.visualizer import Visualizer
+from polymetis import RobotInterface
 
 from rekep.utils import (
     bcolors,

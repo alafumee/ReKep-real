@@ -128,6 +128,11 @@ def test_franka_ik():
     
     print("All tests passed!")
 
+class PolyFrankaIKSolver:
+    '''
+    Franka IK solver based on polymetis RobotInterface interfaces
+    '''
+
 class IKSolver:
     """
     Class for thinly wrapping Lula IK solver
